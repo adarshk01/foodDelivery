@@ -1,3 +1,4 @@
+import useAuthBear from "@/store/auth.store";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
@@ -11,9 +12,14 @@ export default function RootLayout() {
     "Quicksand-SemiBold": require("../assets/fonts/Quicksand-SemiBold.ttf"),
     "Quicksand-Light": require("../assets/fonts/Quicksand-Light.ttf"),
   });
+  const { isLoading, fetchAuthenticatedUser } = useAuthBear();
   useEffect(() => {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error]);
+
+  useEffect(() => {
+    fetchAuthenticatedUser();
+  }, []);
   return <Stack screenOptions={{ headerShown: false }} />;
 }
