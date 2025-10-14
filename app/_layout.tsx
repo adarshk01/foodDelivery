@@ -21,5 +21,7 @@ export default function RootLayout() {
   useEffect(() => {
     fetchAuthenticatedUser();
   }, []);
+  if (!fontsLoaded || isLoading) return null;
+
   return <Stack screenOptions={{ headerShown: false }} />;
 }
