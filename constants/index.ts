@@ -29,6 +29,7 @@ import cheese from "@/assets/images/cheese.png";
 import coleslaw from "@/assets/images/coleslaw.png";
 import cucumber from "@/assets/images/cucumber.png";
 import emptyState from "@/assets/images/empty-state.png";
+import final from "@/assets/images/final.png";
 import fries from "@/assets/images/fries.png";
 import loginGraphic from "@/assets/images/login-graphic.png";
 import logo from "@/assets/images/logo.png";
@@ -168,6 +169,7 @@ export const images = {
   coleslaw,
   cucumber,
   emptyState,
+  final,
   fries,
   loginGraphic,
   logo,
